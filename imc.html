@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="prototipo.js" defer></script>
+</head>
+<body>
+
+  <div id="pantalla-inicial-secundaria">
+  <div class="logo-inicial">
+    <h1>Calculadora de IMC</h1>
+    <p>Prototipooo</p>
+  </div>
+</div>
+
+  <header>
+    <section id="portada" class="portada-imc">
+    <div class="contenido-portada">
+    <h1>🧍‍♂️ Calculadora de IMC</h1>
+    <p>Conoce tu estado nutricional según tu peso y estatura</p>
+    </div>
+  </header>
+
+  <main class="card">
+    <div class="grupo">
+      <label>Peso (kg):</label>
+      <input type="number" id="peso" placeholder="Ej. 70">
+    </div>
+
+    <div class="grupo">
+      <label>Estatura (m):</label>
+      <input type="number" step="0.01" id="estatura" placeholder="Ej. 1.75">
+    </div>
+
+    <button onclick="calcularIMC()">Calcular IMC</button>
+
+    <p id="resultadoIMC" class="nota">* Aquí apareceria el resultado pero no, no hay codigo
+        .</p>
+  </main>
+  
+  
+
+<footer>
+    <p>prototipo IMCC</p>
+  </footer>
+
+</body>
+</html>

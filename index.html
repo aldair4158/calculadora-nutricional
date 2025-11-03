@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú Nutricional</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="prototipo.js" defer></script>
+</head>
+<body>
+<!-- Transcion de inicio--> 
+<div id="pantalla-inicial">
+  <div class="logo-inicial">
+    <h1>🍽️ Menú Nutricional</h1>
+    <p>Prototipo escolar · CETis 120</p>
+  </div>
+</div>
+
+<!-- Portada Calculadura-->
+  <section id="portada" class="portada">
+    <div class="contenido-portada">
+      <h1>🍽️ Bienvenido a la pagina donde encontraras diferentes opciones
+        sobre tu salud nutricional</h1>
+      <p>Selecciona y elige lo mejor para ti.</p>
+      <a href="nutricion.html" class="boton-portada">Calculadora de calorias</a>
+      <a href="imc.html" class="boton-portada secundario">Calculadora de IMC</a>
+    </div>
+  </section>
+  
+  
+  <!--Seccion de contacto-->
+ <section id="contacto" class="card">
+      <h2>Contacto 📩</h2>
+      <p>¿Tienes dudas o sugerencias? Contáctanos aquí.</p>
+      <form action ="https://formspree.io/f/myzbonob" method="POST">
+        <div class="grupo">
+          <label>Nombre:</label>
+          <input type="text" placeholder="Tu nombre">
+        </div>
+        <div class="grupo">
+          <label>Email:</label>
+          <input type="email" placeholder="tucorreo@.com">
+        </div>
+        <div class="grupo">
+          <label>Mensaje:</label>
+          <textarea rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+<footer>
+    <p>prototipo Menú Nutricional</p>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Nutricional</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="prototipo.js" defer></script>
+</head>
+<body>
+  <!-- Encabezado principal -->
+  <header id="inicio">
+    <h1>Calculadora Nutricional</h1>
+    <p>Explora los platillos y conoce sus calorías</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#frutas">Frutas 🥗</a></li>
+      <li><a href="#carnes">Carnes 🍗</a></li>
+      <li><a href="#verduras">Verduras 🥦</a></li>
+      <li><a href="#bebidas">Bebidas 🥤</a></li>
+      <li><a href="#contacto">Contacto 📩</a></li>
+    </ul>
+  </nav>
+
+  <!-- Secciones del menú en general -->
+  <main>
+    <!-- Sección Frutas -->
+    <section id="frutas" class="card">
+      <h2>Frutas 🥗</h2>
+      <p>Seleccione el tipo de fruta e ingrese la cantidad que desee para calcular las calorías.</p>
+    
+      <div class="opciones">
+        <div class="grupo">
+          <label>Tipo de fruta:</label>
+          <select id="fruta">
+            <option value="manzana">Manzana</option>
+            <option value="banana">Banana</option>
+            <option value="naranja">Naranja</option>
+            <option value="fresa">Fresa</option>
+          </select>
+        </div>
+
+        <div class="grupo">
+          <label>Cantidad (porciones):</label>
+          <input type="number" id="cantidadFruta" placeholder="Porciones" min="0" step="0.1">
+        </div>
+
+        <button onclick="calcularCaloriasFruta()">Calcular</button>
+      </div>
+
+      <p id="resultadoFruta" class="nota">* Aquí aparecerá el resultado.</p>
+    </section>
+
+    <!-- Sección Carnes -->
+    <section id="carnes" class="card">
+      <h2>Carnes 🍗</h2>
+      <p>Selecciona el tipo de carne, preparación y cantidad que desee para calcular las calorías.</p>
+
+      <div class="opciones">
+        <div class="grupo">
+          <label>Tipo de carne:</label>
+          <select id="carne">
+            <option value="pollo">Pollo</option>
+            <option value="res">Res</option>
+            <option value="pescado">Pescado</option>
+            <option value="cerdo">Cerdo</option>
+          </select>
+        </div>
+
+        <div class="grupo">
+          <label>Preparación:</label>
+          <select id="preparacion">
+            <option value="asado">Asado</option>
+            <option value="frito">Frito</option>
+            <option value="cocido">Cocido</option>
+          </select>
+        </div>
+
+        <div class="grupo">
+          <label>Cantidad (porciones):</label>
+          <input type="number" id="cantidad" placeholder="Porciones" min="0" step="0.1">
+        </div>
+
+        <button onclick="calcularCalorias()">Calcular</button>
+      </div>
+
+      <p id="resultado" class="nota">* Aquí aparecerá el resultado.</p>
+    </section>
+    
+    <!-- Sección Verduras -->   
+    <section id="verduras" class="card">
+      <h2>Verduras 🥦</h2>
+      <p>Seleccione el tipo de verdura, preparación y cantidad que desee para calcular las calorías.</p>
+      
+      <div class="opciones">
+        <div class="grupo">
+          <label>Tipo de verdura:</label>
+          <select id="verdura">
+            <option value="zanahoria">Zanahoria</option>
+            <option value="brócoli">Brócoli</option>
+            <option value="espinaca">Espinaca</option>
+            <option value="calabaza">Calabaza</option>
+          </select>
+        </div>
+
+        <div class="grupo">
+          <label>Preparación:</label>
+          <select id="preparacionVerdura">
+            <option value="cruda">Cruda</option>
+            <option value="cocida">Cocida</option>
+          </select>
+        </div>
+
+        <div class="grupo">
+          <label>Cantidad (porciones):</label>
+          <input type="number" id="cantidadVerdura" placeholder="Porciones" min="0" step="0.1">
+        </div>
+
+        <button onclick="calcularCaloriasVerduras()">Calcular</button>
+      </div>
+
+      <p id="resultadoVerdura" class="nota">* Aquí aparecerá el resultado.</p>
+    </section>
+
+    <!-- Sección Bebidas -->
+    <section id="bebidas" class="card">
+      <h2>Bebidas 🥤</h2>
+      <p>Seleccione el tipo de bebida y la cantidad en mililitros para calcular las calorías.</p>
+      
+      <div class="opciones">
+        <div class="grupo">
+          <label>Tipo de bebida:</label>
+          <select id="bebida">
+            <option value="agua">Agua natural</option>
+            <option value="jugo-naranja">Jugo de naranja</option>
+            <option value="jugo-manzana">Jugo de manzana</option>
+            <option value="refresco">Refresco</option>
+            <option value="leche">Leche</option>
+            <option value="te-sin-azucar">Té sin azúcar</option>
+          </select>
+        </div>
+
+        <div class="grupo">
+          <label>Cantidad (ml):</label>
+          <input type="number" id="cantidadBebida" placeholder="Mililitros" min="0" step="1">
+        </div>
+
+        <button onclick="calcularCaloriasBebidas()">Calcular</button>
+      </div>
+
+      <p id="resultadoBebida" class="nota">* Aquí aparecerá el resultado.</p>
+    </section>
+
+    <!-- Botón para reiniciar contador -->
+    <section class="card">
+      <h2>Reiniciar Contador</h2>
+      <p>Limpia el total acumulado de calorías y comienza de nuevo.</p>
+      <button onclick="reiniciarContador()" style="background-color: #e74c3c;">Reiniciar Todo</button>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>Calculadora Nutricional - Prototipo 2025</p>
+  </footer>
+</body>
+</html>
